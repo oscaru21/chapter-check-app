@@ -7,8 +7,8 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   template: `
-    <h1>Welcome to {{title}}!</h1>
-
+    <h1 class="text-3xl">Welcome to {{title}}!</h1>
+ 
     <router-outlet></router-outlet>
   `,
   styleUrl: './app.component.css'

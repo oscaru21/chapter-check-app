@@ -1,6 +1,6 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -26,6 +26,7 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
+    "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
