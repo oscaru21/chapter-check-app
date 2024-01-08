@@ -1,0 +1,14 @@
+<div class="flex flex-col justify-start items-start">
+  <p class="py-3 text-4xl font-bold">2024 Inspiration</p>
+  <div class="flex">
+    <app-pill
+      class="mr-2"
+      *ngFor="let filter of filters"
+      [label]="filter"
+      (changeActive)="onPillChange($event)"
+    ></app-pill>
+  </div>
+  <div class="grow grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!--inspiration goals grid-->
+  </div>
+</div>
