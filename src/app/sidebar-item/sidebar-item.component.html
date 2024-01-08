@@ -1,0 +1,10 @@
+<a
+  [routerLink]="routerLink"
+  [routerLinkActive]="['bg-brand', 'text-white']"
+  class="flex items-center p-2 mb-4 hover:bg-brand hover:text-white rounded-md"
+>
+  <div class="mr-3 w-[30px] h-[30px] flex justify-center items-center">
+    <mat-icon>{{ iconName }}</mat-icon>
+  </div>
+  <span class="text-md font-medium text-center">{{ title }}</span>
+</a>

@@ -1,18 +1,22 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { InspirationComponent } from './inspiration/inspiration.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [InspirationComponent, SidebarComponent, RouterModule],
   template: `
-    <h1 class="text-3xl">Welcome to {{title}}!</h1>
- 
-    <router-outlet></router-outlet>
+    <main class="h-full p-0 m-0 flex bg-white">
+      <app-sidebar></app-sidebar>
+      <section class="content p-14 mx-auto grow">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
   `,
-  styleUrl: './app.component.css'
+  styles: []
 })
 export class AppComponent {
-  title = 'chapter-check-app';
+
 }
