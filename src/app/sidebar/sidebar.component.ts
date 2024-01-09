@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, SidebarItemComponent, MatIconModule],
   template: `
-    <nav class="h-screen px-5 w-[300px] flex flex-col justify-between bg-secondary rounded-lg text-black static transition-all duration-300 ease-in-out">
+    <nav class="h-screen px-5 w-[300px] flex flex-col justify-between bg-secondary rounded-lg text-black transition-all duration-300 ease-in-out">
       <div class="sidebar-info flex flex-col border-b-2 border-border">
         <div class="sidebar-logo flex justify-between items-center">
           <!-- Left side with logo -->

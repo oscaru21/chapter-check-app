@@ -8,10 +8,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   standalone: true,
   imports: [InspirationComponent, SidebarComponent, RouterModule],
   template: `
-    <main class="h-full p-0 m-0 flex bg-white">
-      <app-sidebar></app-sidebar>
+    <main class="p-0 m-0 flex bg-white items-start">
+      <app-sidebar class="sticky top-0"></app-sidebar>
       <section class="content p-14 mx-auto grow">
-        <router-outlet></router-outlet>
+        <div class="bg-white">
+          <router-outlet></router-outlet>
+        </div>
       </section>
     </main>
   `,
