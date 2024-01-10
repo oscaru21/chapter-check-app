@@ -1,18 +1,17 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
-import { PillComponent } from '../pill/pill.component';
-import { CommonModule } from '@angular/common';
-import { InspirationCardComponent } from '../inspiration-card/inspiration-card.component';
+import { Component } from '@angular/core';
 import { IInspiration } from '../models/inspiration';
-import { isEmpty } from 'rxjs';
+import { InspirationCardComponent } from '../inspiration-card/inspiration-card.component';
+import { CommonModule } from '@angular/common';
+import { PillComponent } from '../pill/pill.component';
 
 @Component({
-  selector: 'app-inspiration',
+  selector: 'app-outline',
   standalone: true,
   imports: [PillComponent, CommonModule, InspirationCardComponent],
-  templateUrl: './inspiration.component.html',
-  styles: []
+  templateUrl: './outline.component.html',
+  styles: ``
 })
-export class InspirationComponent {
+export class OutlineComponent {
   filters: string[] = ['Health', 'Career', 'Mindfulness', 'Education', 'Nutrition', 'Personal Relationships']
   activeFilters: string[] = [];
 
