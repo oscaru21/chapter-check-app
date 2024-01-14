@@ -1,6 +1,6 @@
-<div class="h-full w-full flex flex-col justify-start items-start">
-  <div class="sticky top-0 bg-white pb-3 w-full">
-    <p class="py-3 text-4xl font-bold">2024 Inspiration</p>
+<div class="content-container">
+  <div class="sticky top-0 pb-3 w-full bg-white">
+    <p class="py-3 text-3xl font-bold">2024 Inspiration</p>
   </div>
   <div class="flex flex-wrap">
     <app-pill
@@ -11,26 +11,11 @@
     ></app-pill>
   </div>
   <div
-    class="w-full my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14"
+    class="w-full py-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10 justify-items-start"
   >
     <app-inspiration-card
-      class="grid justify-items-center"
-      *ngFor="let inspo of displayableInspo"
-      [inspiration]="inspo"
-    ></app-inspiration-card>
-    <app-inspiration-card
-      class="grid justify-items-center"
-      *ngFor="let inspo of displayableInspo"
-      [inspiration]="inspo"
-    ></app-inspiration-card>
-    <app-inspiration-card
-      class="grid justify-items-center"
-      *ngFor="let inspo of displayableInspo"
-      [inspiration]="inspo"
-    ></app-inspiration-card>
-    <app-inspiration-card
-      class="grid justify-items-center"
-      *ngFor="let inspo of displayableInspo"
+      class="w-full"
+      *ngFor="let inspo of inspirations$ | async"
       [inspiration]="inspo"
     ></app-inspiration-card>
   </div>

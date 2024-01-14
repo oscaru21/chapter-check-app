@@ -3,7 +3,7 @@ export interface IInspiration {
     text: string;
     category: string;
     status: Status
-    userId?: string | null;
+    userId?: string;
 }
 
 export enum Status {

@@ -4,9 +4,31 @@
 
 html,
 body {
+  background: transparent;
   height: 100%;
-}
-body {
   margin: 0;
   font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
+
+@layer components {
+  .sidebar-icon {
+    @apply relative flex items-center justify-center 
+    h-12 w-12 mt-2 mb-2 mx-auto  
+  bg-secondary hover:bg-brand dark:bg-gray-800 
+  text-black hover:text-white
+    hover:rounded-xl rounded-3xl
+    transition-all duration-300 ease-linear
+    cursor-pointer hover:shadow-lg;
+  }
+
+  .sidebar-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+    text-white bg-gray-900 
+    text-xs font-bold
+    transition-all duration-100 scale-0 origin-left;
+  }
+
+  .content-container {
+    @apply h-full w-[calc(100vw-4rem)] ml-16 p-4 flex flex-col justify-start;
+  }
 }

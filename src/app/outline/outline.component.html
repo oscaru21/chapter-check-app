@@ -1,15 +1,8 @@
-<div class="h-full w-full flex flex-col justify-start items-start">
+<div class="content-container">
   <div class="sticky top-0 bg-white pb-3 w-full">
-    <p class="py-3 text-4xl font-bold">January Outline</p>
+    <p class="py-3 text-3xl font-bold">January Outline</p>
   </div>
-  <div class="flex flex-wrap">
-    <app-pill
-      class="mr-2 mb-2"
-      *ngFor="let filter of filters"
-      [label]="filter"
-      (changeActive)="onPillChange($event)"
-    ></app-pill>
-  </div>
+  <div class="flex flex-wrap"></div>
   <div
     class="w-full my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-14"
   ></div>

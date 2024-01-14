@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{html,ts}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -10,6 +11,11 @@ export default {
         white: "#F8F2FC",
         black: "#10001D",
       },
+    },
+  },
+  variants: {
+    extend: {
+      borderRadius: ["hover"],
     },
   },
   plugins: [],
