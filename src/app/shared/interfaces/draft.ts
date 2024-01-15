@@ -1,8 +1,10 @@
-export interface IOutline {
-    _id: string;
+import { Status } from "./inspiration";
+
+export interface IDraft {
+    _id?: string;
     text: string;
     category: string;
-    status: string;
+    status: Status;
     userId?: string;
-    inspirationId: string;
+    outlineId: string;
 }

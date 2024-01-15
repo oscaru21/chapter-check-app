@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IOutline } from '../../shared/interfaces/draft';
+import { IOutline } from '../../shared/interfaces/outline';
+import { Status } from '../../shared/interfaces/inspiration';
 
 @Injectable({
   providedIn: 'root'
@@ -17,21 +18,21 @@ export class OutlineService {
         inspirationId: '1',
         text: 'Eat carrots',
         category: 'Health',
-        status: 'Not Started'
+        status: 'Not Started' as Status
       },
       {
         _id: '2',
         inspirationId: '1',
         text: 'Eat less sugar',
         category: 'Health',
-        status: 'Not Started'
+        status: 'Not Started' as Status
       },
       {
         _id: '3',
         inspirationId: '2',
         text: 'Run every morning',
         category: 'Health',
-        status: 'Not Started'
+        status: 'Not Started' as Status
       }
     ];
 

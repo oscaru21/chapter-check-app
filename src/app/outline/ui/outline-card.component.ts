@@ -1,34 +1,34 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { IInspiration } from '../../shared/interfaces/inspiration';
+import { IOutline } from '../../shared/interfaces/outline';
 
 @Component({
-  selector: 'app-inspiration-card',
+  selector: 'app-outline-card',
   standalone: true,
   imports: [MatIconModule],
   template: `
-    <div class="w-full max-w-[300px] h-[170px] p-3 bg-border text-white flex flex-col rounded-xl shadow-lg">
-      <div class="flex justify-between">
+    <div class="w-full max-w-[300px] h-[170px] bg-white border-border border-4 text-black flex flex-col rounded-xl shadow-lg">
+      <div class="p-3 flex justify-between text-white bg-border">
         <mat-icon>medical_information</mat-icon>
         <button>
           <mat-icon>more_horiz</mat-icon>
         </button>
       </div>
-      <div class="grow mt-4">
-        {{inspiration.text}}
+      <div class="px-3 grow mt-4">
+        {{outline.text}}
       </div>
-      <div class="flex justify-end">
+      <div class="px-3 pb-3 flex justify-end">
         <div
         class="px-5 py-1 rounded-3xl text-sm text-white"
-        [class]="statusClasses[inspiration.status]"
-        >{{inspiration.status}}</div>
+        [class]="statusClasses[outline.status]"
+        >{{outline.status}}</div>
       </div>
     </div>
   `,
   styles: ``
 })
-export class InspirationCardComponent {
-  @Input() inspiration!: IInspiration;
+export class OutlineCardComponent {
+  @Input() outline!: IOutline;
 
   statusClasses = {
     'Done': 'bg-[#9ADE7B]',

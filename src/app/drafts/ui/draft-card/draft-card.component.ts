@@ -1,34 +1,34 @@
 import { Component, Input } from '@angular/core';
+import { IDraft } from '../../../shared/interfaces/draft';
 import { MatIconModule } from '@angular/material/icon';
-import { IInspiration } from '../../shared/interfaces/inspiration';
 
 @Component({
-  selector: 'app-inspiration-card',
+  selector: 'app-draft-card',
   standalone: true,
   imports: [MatIconModule],
   template: `
-    <div class="w-full max-w-[300px] h-[170px] p-3 bg-border text-white flex flex-col rounded-xl shadow-lg">
-      <div class="flex justify-between">
+    <div class="w-full max-w-[300px] h-[170px] p-3 bg-white border-border border-4 text-black flex flex-col rounded-xl shadow-lg">
+      <div class="flex justify-between text-border">
         <mat-icon>medical_information</mat-icon>
         <button>
           <mat-icon>more_horiz</mat-icon>
         </button>
       </div>
       <div class="grow mt-4">
-        {{inspiration.text}}
+        {{draft.text}}
       </div>
       <div class="flex justify-end">
         <div
         class="px-5 py-1 rounded-3xl text-sm text-white"
-        [class]="statusClasses[inspiration.status]"
-        >{{inspiration.status}}</div>
+        [class]="statusClasses[draft.status]"
+        >{{draft.status}}</div>
       </div>
     </div>
   `,
   styles: ``
 })
-export class InspirationCardComponent {
-  @Input() inspiration!: IInspiration;
+export class DraftCardComponent {
+  @Input() draft!: IDraft;
 
   statusClasses = {
     'Done': 'bg-[#9ADE7B]',
