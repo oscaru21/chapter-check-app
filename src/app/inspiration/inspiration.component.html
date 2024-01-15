@@ -15,7 +15,7 @@
   >
     <app-inspiration-card
       class="w-full"
-      *ngFor="let inspo of inspirations$ | async"
+      *ngFor="let inspo of inspos()"
       [inspiration]="inspo"
     ></app-inspiration-card>
   </div>

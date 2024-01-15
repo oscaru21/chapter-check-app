@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
-interface PillParams {
+export interface PillParams {
   isActive: boolean;
   label: string;
 }

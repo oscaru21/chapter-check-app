@@ -10,7 +10,7 @@ import { SidebarUserComponent } from './sidebar-user.component';
   imports: [CommonModule, MatIconModule, SidebarItemComponent, SidebarUserComponent],
   template: `
     <nav 
-      class="fixed top-0 left-0 h-full w-16 rounded-xl flex flex-col justify-between bg-border dark:bg-gray-900 shadow-lg"
+      class="fixed top-0 left-0 h-full w-16 py-4 rounded-xl flex flex-col justify-between bg-border dark:bg-gray-900 shadow-lg"
     >
       <section>
         <app-sidebar-item *ngFor="let item of sidebarItems" [params]="item"></app-sidebar-item>

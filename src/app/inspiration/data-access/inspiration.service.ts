@@ -1,18 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, computed, signal } from '@angular/core';
 import { IInspiration, Status } from '../../shared/interfaces/inspiration';
-import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class InspirationService {
+  filters = signal<string[]>([]);
 
-  // sources
-  inspirations$ = this.getInspirations();
+
+  //sources
+  inspirations = this.getInspirations();
+  displayableInspo = computed(() => {
+    if (!this.filters().length) {
+      return this.inspirations;
+    } else {
+      return this.inspirations.filter(inspo => this.filters().includes(inspo.category));
+    }
+  })
 
   constructor() { }
 
-  private getInspirations(): Observable<IInspiration[]> {
+  private getInspirations(): IInspiration[] {
     const inspirations: IInspiration[] = [
       {
         text: 'Eat Healthier',
@@ -36,7 +44,7 @@ export class InspirationService {
       }
     ]
 
-    return of(inspirations);
+    return inspirations;
   }
 
   private addInspiration(text: string, category: string) {

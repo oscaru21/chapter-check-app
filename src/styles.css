@@ -29,6 +29,6 @@ body {
   }
 
   .content-container {
-    @apply h-full w-[calc(100vw-4rem)] ml-16 p-4 flex flex-col justify-start;
+    @apply h-full w-[calc(100vw-4rem)] ml-16 p-6 flex flex-col justify-start;
   }
 }
