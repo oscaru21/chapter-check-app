@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui";
 export default {
   content: ["./src/**/*.{html,ts}"],
   darkMode: "class",
@@ -18,5 +19,5 @@ export default {
       borderRadius: ["hover"],
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 };
