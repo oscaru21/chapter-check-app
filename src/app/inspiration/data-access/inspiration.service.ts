@@ -7,7 +7,6 @@ import { IInspiration, Status } from '../../shared/interfaces/inspiration';
 export class InspirationService {
   filters = signal<string[]>([]);
 
-
   //sources
   inspirations = this.getInspirations();
   displayableInspo = computed(() => {
@@ -23,21 +22,25 @@ export class InspirationService {
   private getInspirations(): IInspiration[] {
     const inspirations: IInspiration[] = [
       {
+        _id: '1',
         text: 'Eat Healthier',
         category: 'Health',
         status: 'Done' as Status
       },
       {
+        _id: '2',
         text: 'Control my Diabetes',
         category: 'Health',
         status: 'Done' as Status
       },
       {
+        _id: '3',
         text: 'Make more exercise',
         category: '',
         status: 'In Progress' as Status
       },
       {
+        _id: '4',
         text: 'Graduate from college',
         category: 'Health',
         status: 'Not Started' as Status

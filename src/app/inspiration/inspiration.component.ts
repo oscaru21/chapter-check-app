@@ -4,11 +4,12 @@ import { InspirationService } from './data-access/inspiration.service';
 import { PillComponent, PillParams } from '../shared/ui/pill.component';
 import { InspirationCardComponent } from './ui/inspiration-card.component';
 import { FilterPipe } from '../shared/pipes/filter.pipe';
+import { AddComponent } from '../shared/ui/add.component';
 
 @Component({
     selector: 'app-inspiration',
     standalone: true,
-    imports: [CommonModule, InspirationCardComponent, PillComponent],
+    imports: [CommonModule, InspirationCardComponent, PillComponent, AddComponent],
     providers: [FilterPipe],
     templateUrl: './inspiration.component.html',
     styles: []
