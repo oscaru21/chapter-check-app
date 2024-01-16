@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   template: `
-    <div class="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
+    <div 
+      
+      class="fixed inset-0 z-10 flex items-center justify-center bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg">
         <div class="px-4 py-10 md:px-10 bg-secondary border-border border shadow-sm rounded-3xl">
           <form class="">
             <div class="font-normal">
